@@ -58,16 +58,16 @@ Evaluated across **$4 \times 10,000 = 40,000$ completed Monte Carlo paths**:
 
 | Metric / Statistical Test | Empirical Value | Physical / Operational Significance |
 |:---|:---:|:---|
-| **Bearing 1 Mean Lead Time ($\mathbb{E}[\Delta\tau_{\text{LIH}}]$)** | **61.99 h** | Average tactical decision margin before catastrophic seizure[cite: 84, 94] |
-| **Bearing 1 Median Lead Time ($\text{Med}(\Delta\tau_{\text{LIH}})$)** | **59.95 h** | Robust central tendency[cite: 84, 94] (95% CI: `[57.10 h, 62.40 h]`)[cite: 84] |
-| **24-Hour Buffer Compliance ($P(\Delta\tau_{\text{LIH}} \ge 24\text{ h})$)** | **96.92%** | Probability of meeting mobilization window $\tau_{\text{req}} = 24\text{ h}$[cite: 84, 94] |
-| **Bearing 3 False Positive Rate (Nominal)** | **0.00%** | Zero spurious alarms during undamaged operational life[cite: 84, 94] |
-| **Bearings 2 & 4 False Positive Rate (Nominal)** | **0.00%** | Rejection of shaft crosstalk during nominal phase[cite: 84, 94] |
-| **Mann-Whitney U Test ($H_1: \Delta\tau > 24\text{ h}$)** | $U = 9.69 \times 10^7$ ($p < 10^{-15}$) | Significant superiority over minimum operational notice[cite: 84, 94] |
-| **Kolmogorov-Smirnov Test (Real Telemetry)** | $D = 0.4003$ ($p = 1.22 \times 10^{-142}$) | Decisive rejection of Gaussian degradation increments[cite: 68, 84] |
-| **99% Value-at-Risk (Reactive Replacement)** | **€ 2,660,627.42** | Uncontained catastrophic downtime tail loss[cite: 84, 94] |
-| **99% Value-at-Risk (Prescriptive LIH Policy)** | **€ 288,637.01** | Truncated planned downtime cost[cite: 84, 94] |
-| **Extremal Tail-Risk Mitigation ($\Delta\text{VaR}_{99\%}$)** | **89.15%** | Net financial exposure reduction[cite: 84, 94] |
+| **Bearing 1 Mean Lead Time ($\mathbb{E}[\Delta\tau_{\text{LIH}}]$)** | **61.99 h** | Average tactical decision margin before catastrophic seizure |
+| **Bearing 1 Median Lead Time ($\text{Med}(\Delta\tau_{\text{LIH}})$)** | **59.95 h** | Robust central tendency (95% CI: `[57.10 h, 62.40 h]`) |
+| **24-Hour Buffer Compliance ($P(\Delta\tau_{\text{LIH}} \ge 24\text{ h})$)** | **96.92%** | Probability of meeting mobilization window $\tau_{\text{req}} = 24\text{ h}$ |
+| **Bearing 3 False Positive Rate (Nominal)** | **0.00%** | Zero spurious alarms during undamaged operational life |
+| **Bearings 2 & 4 False Positive Rate (Nominal)** | **0.00%** | Rejection of shaft crosstalk during nominal phase |
+| **Mann-Whitney U Test ($H_1: \Delta\tau > 24\text{ h}$)** | $U = 9.69 \times 10^7$ ($p < 10^{-15}$) | Significant superiority over minimum operational notice |
+| **Kolmogorov-Smirnov Test (Real Telemetry)** | $D = 0.4003$ ($p = 1.22 \times 10^{-142}$) | Decisive rejection of Gaussian degradation increments |
+| **99% Value-at-Risk (Reactive Replacement)** | **€ 2,660,627.42** | Uncontained catastrophic downtime tail loss |
+| **99% Value-at-Risk (Prescriptive LIH Policy)** | **€ 288,637.01** | Truncated planned downtime cost |
+| **Extremal Tail-Risk Mitigation ($\Delta\text{VaR}_{99\%}$)** | **89.15%** | Net financial exposure reduction |
 
 ---
 
@@ -76,13 +76,13 @@ Evaluated across **$4 \times 10,000 = 40,000$ completed Monte Carlo paths**:
 ```text
 ├── Hawkes_Merton_Bearing_Prognostics.ipynb  # Vectorized 40k Monte Carlo simulation & plotting
 ├── requirements.txt                         # Dependency specifications
-├── figures/                                 # Generated publication-quality vector outputs (PDF)[cite: 94]
-│   ├── fig1_degradation_ensemble.pdf        # Ensemble damage trajectories H(t) across bearings[cite: 94]
-│   ├── fig2_intensity_evolution.pdf         # Temporal KDE snapshots of hazard density lambda(t)[cite: 94]
-│   ├── fig3_ecdf_lih.pdf                    # Empirical CDF of actionable lead time margin[cite: 94]
-│   ├── fig4_qq_plot.pdf                     # Exponential Q-Q plot proving jump heavy tails[cite: 94]
-│   ├── fig5_stability_surface.pdf           # Phase diagram of branching ratio n_0 = alpha / beta[cite: 94]
-│   ├── fig6_financial_tails.pdf             # VaR99% loss distributions: reactive vs. prescriptive[cite: 94]
-│   ├── fig7_roc_curves.pdf                  # Multi-cohort ROC/AUC curves for lead horizons[cite: 94]
-│   └── fig8_volatility_bifurcation.pdf      # Intensity volatility bifurcation (faulty vs. nominal)[cite: 94]
+├── figures/                                 # Generated publication-quality vector outputs (PDF)
+│   ├── fig1_degradation_ensemble.pdf        # Ensemble damage trajectories H(t) across bearings
+│   ├── fig2_intensity_evolution.pdf         # Temporal KDE snapshots of hazard density lambda(t)
+│   ├── fig3_ecdf_lih.pdf                    # Empirical CDF of actionable lead time margin
+│   ├── fig4_qq_plot.pdf                     # Exponential Q-Q plot proving jump heavy tails
+│   ├── fig5_stability_surface.pdf           # Phase diagram of branching ratio n_0 = alpha / beta
+│   ├── fig6_financial_tails.pdf             # VaR99% loss distributions: reactive vs. prescriptive
+│   ├── fig7_roc_curves.pdf                  # Multi-cohort ROC/AUC curves for lead horizons
+│   └── fig8_volatility_bifurcation.pdf      # Intensity volatility bifurcation (faulty vs. nominal)
 └── README.md
