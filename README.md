@@ -54,16 +54,16 @@ $$\lambda(t_k) = \mu_0 + (\lambda(t_{k-1}) - \mu_0)e^{-\beta \Delta t} + \sum_{t
 
 | Metric / Statistical Test | Empirical Value | Physical / Operational Significance |
 | :--- | :---: | :--- |
-| **Bearing 1 Mean Lead Time ($\mathbb{E}[\Delta\tau_{\text{LIH}}]$)** | **61.99 h** | Average tactical decision margin before catastrophic seizure |
-| **Bearing 1 Median Lead Time ($\text{Med}(\Delta\tau_{\text{LIH}})$)** | **59.95 h** | Robust central tendency (95% CI: `[57.10 h, 62.40 h]`) |
-| **24-Hour Buffer Compliance ($P(\Delta\tau_{\text{LIH}} \ge 24\text{ h})$)** | **96.92%** | Probability of meeting mobilization window $\tau_{\text{req}} = 24\text{ h}$ |
+| **Bearing 1 Mean Lead Time (E[Δτ_LIH])** | **61.99 h** | Average tactical decision margin before catastrophic seizure |
+| **Bearing 1 Median Lead Time (Med(Δτ_LIH))** | **59.95 h** | Robust central tendency (95% CI: [57.10 h, 62.40 h]) |
+| **24-Hour Buffer Compliance (P(Δτ_LIH ≥ 24 h))** | **96.92%** | Probability of meeting mobilization window τ_req = 24 h |
 | **Bearing 3 False Positive Rate (Nominal)** | **0.00%** | Zero spurious alarms during undamaged operational life |
 | **Bearings 2 & 4 False Positive Rate (Nominal)** | **0.00%** | Rejection of shaft crosstalk during nominal phase |
-| **Mann-Whitney U Test ($H_1: \Delta\tau > 24\text{ h}$)** | $U = 9.69 \times 10^7$ ($p < 10^{-15}$) | Significant superiority over minimum operational notice |
-| **Kolmogorov-Smirnov Test (Real Telemetry)** | $D = 0.4003$ ($p = 1.22 \times 10^{-142}$) | Decisive rejection of Gaussian degradation increments |
+| **Mann-Whitney U Test (H₁: Δτ > 24 h)** | **U = 9.69 × 10⁷ (p < 10⁻¹⁵)** | Significant superiority over minimum operational notice |
+| **Kolmogorov-Smirnov Test (Real Telemetry)** | **D = 0.4003 (p = 1.22 × 10⁻¹⁴²)** | Decisive rejection of Gaussian degradation increments |
 | **99% Value-at-Risk (Reactive Replacement)** | **€ 2,660,627.42** | Uncontained catastrophic downtime tail loss |
 | **99% Value-at-Risk (Prescriptive LIH Policy)** | **€ 288,637.01** | Truncated planned downtime cost |
-| **Extremal Tail-Risk Mitigation ($\Delta\text{VaR}_{99\%}$)** | **89.15%** | Net financial exposure reduction |
+| **Extremal Tail-Risk Mitigation (ΔVaR 99%)** | **89.15%** | Net financial exposure reduction |
 
 ---
 
