@@ -52,12 +52,8 @@ $$\lambda(t_k) = \mu_0 + (\lambda(t_{k-1}) - \mu_0)e^{-\beta \Delta t} + \sum_{t
 
 ---
 
-## Experimental Benchmark Results (NASA IMS Test 2)
-
-Evaluated across **$4 \times 10,000 = 40,000$ completed Monte Carlo paths**:
-
 | Metric / Statistical Test | Empirical Value | Physical / Operational Significance |
-|:---|:---:|:---|
+| :--- | :---: | :--- |
 | **Bearing 1 Mean Lead Time ($\mathbb{E}[\Delta\tau_{\text{LIH}}]$)** | **61.99 h** | Average tactical decision margin before catastrophic seizure |
 | **Bearing 1 Median Lead Time ($\text{Med}(\Delta\tau_{\text{LIH}})$)** | **59.95 h** | Robust central tendency (95% CI: `[57.10 h, 62.40 h]`) |
 | **24-Hour Buffer Compliance ($P(\Delta\tau_{\text{LIH}} \ge 24\text{ h})$)** | **96.92%** | Probability of meeting mobilization window $\tau_{\text{req}} = 24\text{ h}$ |
